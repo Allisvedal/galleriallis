@@ -1,0 +1,54 @@
+/* Reset og base-styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  color: #111;
+  padding: 1rem;
+}
+
+/* Galleri container med css grid */
+
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* Hvert bildeelement */
+
+.bilde img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bilde {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.bilde:hover {
+  transform: scale(1.02);
+}
+
+.bilde p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+.bilde.stor {
+  grid-column: span 2;
+}
